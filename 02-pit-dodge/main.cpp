@@ -15,6 +15,13 @@ int main(){
         pits[i].triggered = false; //makes sure no pit spawns exact on 0,0 where you strt
         if(pits[i].x == 0 && pits[i].z == 0)pits[i].x =8;
     }
+    for(auto & p:pits){
+        if(cubeX === p.x && cubeZ == p.z){
+            p.triggered = true;// GAME OVER LOGIC
+            gameOver=true;
+
+        }
+    }
     
     float x=0; //remember x first before we start //aslo left and right keys
     float y=0;//up and down keys
