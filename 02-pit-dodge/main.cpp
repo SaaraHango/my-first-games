@@ -23,6 +23,7 @@ int main(){
         }
     }
     
+    
     float x=0; //remember x first before we start //aslo left and right keys
     float y=0;//up and down keys
 
@@ -53,6 +54,8 @@ int main(){
         BeginDrawing();//start at the edge
                 ClearBackground(BLUE);
                 BeginMode3D(camera);
+                   //Draw ground
+                   DrawPlane ((Vector3){0, 0, 0}, (Vector2){20,20} LIGHTGRAY);
                    DrawCube((Vector3){ x, 1, z}, 2, 2, 2, YELLOW); //THE CUBE AT X, Z
                    DrawGrid(20, 1.0f); //floor so I see the depth
                    EndMode3D();
